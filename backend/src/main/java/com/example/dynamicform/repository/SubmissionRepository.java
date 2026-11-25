@@ -1,0 +1,5 @@
+package com.example.dynamicform.repository;
+import com.example.dynamicform.model.FormSubmission;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+public interface SubmissionRepository extends JpaRepository<FormSubmission,Long>{List<FormSubmission> findAllByOrderBySubmittedAtDesc();}
